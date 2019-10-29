@@ -1,0 +1,4 @@
+docker pull debian
+apt update
+apt install build-essential -y
+apt-get install manpages-dev
