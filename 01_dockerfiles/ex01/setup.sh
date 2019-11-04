@@ -1,10 +1,10 @@
 #create a user
-# adduser --disable-password --gecos "" teamspeak
-adduser --gecos "" teamspeak
+
+adduser --disabled-password --gecos "" teamspeak
 
 #create a folder
 mkdir /opt/teamspeak
-chown teamspeak:teamspeak /opt/teamspeak/
+chown -R teamspeak:teamspeak /opt/teamspeak/
 chmod 0770 /opt/teamspeak/
 
 #create a service script 
@@ -37,8 +37,14 @@ deb-src http://security.debian.org/ wheezy/updates main contrib non-free
 deb http://ftp.nl.debian.org/debian wheezy-updates main contrib non-free
 deb-src http://ftp.nl.debian.org/debian wheezy-updates main contrib non-free" >> etc/apt/sources.list
 apt-get update -y
+apt-get upgrade -y
 apt-get dist-upgrade -y
-apt install systemd -y
+apt-get install apt-utils -y
+apt-get install systemd -y
+apt-get install wget -y
+apt-get install tar -y
+apt-get install bzip2 -y
+
 systemctl daemon-reload
 systemctl enable teamspeak3server.service
 
