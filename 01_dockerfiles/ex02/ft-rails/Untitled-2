@@ -1,0 +1,4 @@
+commands to run
+1st. cd ..
+2nd. docker build -t ex02 .
+3rd. take picture ,slack to LLanga
