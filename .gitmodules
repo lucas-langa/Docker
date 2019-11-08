@@ -1,0 +1,3 @@
+[submodule "01_dockerfiles/ex02/ft-rails/hello_world"]
+	path = 01_dockerfiles/ex02/ft-rails/hello_world
+	url = https://github.com/lucas-langa/hello_world.git
