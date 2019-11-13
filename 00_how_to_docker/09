@@ -1,4 +1,3 @@
-apt update
+apt update -y
 apt install build-essential -y
 apt install git -y
-apt-get install manpages-dev
